@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import getData from "../../utils/getData";
 
 function Dashboard() {
 
@@ -7,10 +8,11 @@ function Dashboard() {
     const [price, setPrice] = useState("0.00");
     const [pastData, setPastData] = useState({});
 
+    useEffect(() => {
+        getData("USD");
+    }, [])
 
-    const ws = useRef(null);
-    const url = useRef(false);
-    const first = "https://api.pro.coinbase.com";
+
 
     return (
     <div className="dashboardWrapper">
