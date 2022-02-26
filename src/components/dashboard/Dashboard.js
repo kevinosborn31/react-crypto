@@ -13,7 +13,7 @@ function Dashboard() {
 
     useEffect(() => {
         ws.current = new WebSocket("wss://ws-feed.pro.coinbase.com");
-
+        let pairs;
         const apiCall = async () => {
             await fetch(url + "/products")
               .then((res) => res.json())
@@ -34,6 +34,7 @@ function Dashboard() {
                 }
               return 0;
             });
+
           
           setCurrencies(filtered);
       
