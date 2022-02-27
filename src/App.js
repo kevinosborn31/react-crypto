@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { formatData } from "./utils/formatData";
-import "./styles.css";
+import "./App.css";
 
 export default function App() {
   const [currencies, setcurrencies] = useState([]);

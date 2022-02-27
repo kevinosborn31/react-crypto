@@ -25,12 +25,12 @@ export const formatData = (data) => {
     });
 
     // get ending price from coinbase API
-    let princeArr = data.map((val) => {
+    let priceArr = data.map((val) => {
         return val[4];
     });
 
     // reverse price array so it is in chronological order
-    princeArr.reverse();
+    priceArr.reverse();
 
     // do same for dates
     dates.reverse();
@@ -39,7 +39,7 @@ export const formatData = (data) => {
     finalData.labels = dates;
 
     // price array will be used as dataset for Chartjs
-    finalData.datsets[0].data = priceArr;
+    finalData.datasets[0].data = priceArr;
 
     return finalData;
 };
